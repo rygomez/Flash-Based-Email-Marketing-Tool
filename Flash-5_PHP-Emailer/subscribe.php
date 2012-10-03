@@ -15,11 +15,7 @@ $siteaddress ="http://www.kreativesource.com";
 // Enter your company name or site name here
 $sitename = "Your Site Name";
 
-/*******************************************************
 
-No need to change anything below unless you want to add or subtract functions or change the wording of things sent back to the flash file ...
-
-*******************************************************/
 
 // Gets the date and time from your server
 $date = date("m/d/Y H:i:s");
@@ -43,11 +39,13 @@ Hostname: $ip
 IP address: $REMOTE_ADDR
 Date/Time:  $date","FROM:$adminaddress");
 
-//This sends a confirmation to your visitor
+//This sends a confirmation email to your visitor
+//Subject Here
 mail("$email","Thank You for visiting $sitename",
+
+//Body of the Email here
 "Hi $name,\n
-Thanks for subscribing we will be sure to keep you informed to all the news here at Court Square.
-Thank you for your interest in $sitename!\n
+Thanks for your email you will now recieve updates from $sitename!\n
 Cheers,
 $sitename
 $siteaddress","FROM:$adminaddress");
@@ -59,5 +57,5 @@ $send_answer .= rawurlencode($sendresult);
 echo "$send_answer";
 
 endif;
-//Thats about it I hope it is useful to this script was contemplated by Ryan Gomez @ www.brooklynbeats.com
+//Thats about it I hope it is useful 
 ?>
